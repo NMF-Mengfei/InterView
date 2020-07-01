@@ -1,0 +1,50 @@
+<!--
+ * @Author: niumengfei
+ * @Date: 2020-06-28 10:20:42
+ * @LastEditors: niumengfei
+ * @LastEditTime: 2020-06-28 11:14:18
+--> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    /* 1.浅拷贝 ES6方法 Object.assign() */ 
+    var obj = {
+        a: 111,
+        b: {
+            x: '555'
+        },
+        fn:function(){
+            console.log(1)
+        }
+    }
+    var newObj = Object.assign({},obj)
+    obj.a = 222
+    obj.b.x = '666'
+    obj.fn = function(){
+        console.log(2)
+    }
+    console.log(obj) 
+    console.log(newObj) 
+    obj.fn() //1
+    newObj.fn() //2
+    //Object.assign()方法用于将所有可枚举属性的值从一个或多个源对象复制到目标对象。它将返回目标对象。
+    //Object.assign()会合并生成一个新的对象。
+    //如果对象的属性是基本数据类型，改变之后新对象不会改变，
+    //如果对象的属性是引用数据类型，新对象会改变
+
+    /* 2.深拷贝 */
+ 
+
+    /* 参考
+        https://juejin.im/post/5b5affaef265da0f86543bc9 
+     */
+</script>
+</html>
