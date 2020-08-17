@@ -2,7 +2,7 @@
  * @Author: niumengfei
  * @Date: 2020-06-28 10:20:42
  * @LastEditors: niumengfei
- * @LastEditTime: 2020-06-28 11:14:18
+ * @LastEditTime: 2020-07-02 14:53:51
 --> 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,6 +15,8 @@
     
 </body>
 <script>
+    // "use strict";
+
     /* 1.浅拷贝 ES6方法 Object.assign() */ 
     var obj = {
         a: 111,
@@ -46,5 +48,19 @@
     /* 参考
         https://juejin.im/post/5b5affaef265da0f86543bc9 
      */
+
+    // (function foo(){
+    //     console.log(666)
+    // })()
+
+    // (function foo(){
+    //     console.log(666)
+    // }())
+    // foo()
+   console.log(foo)
+        bar()
+   var foo = function(){
+       
+   }
 </script>
 </html>

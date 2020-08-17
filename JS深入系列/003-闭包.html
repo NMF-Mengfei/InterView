@@ -1,0 +1,74 @@
+<!--
+ * @Author: niumengfei
+ * @Date: 2020-07-03 10:36:17
+ * @LastEditors: niumengfei
+ * @LastEditTime: 2020-07-14 10:39:47
+--> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // for(let i=0;i<=5;i++){
+    //     // setTimeout(function(){
+    //     //     console.log(i)
+    //     // },i*1000)
+
+    //     // (function(j){
+    //     //     setTimeout(function(){
+    //     //         console.log(j)
+    //     //     },j*1000)
+    //     // })(i)
+
+    //     // let j = i;
+    //     setTimeout(function(){
+    //         console.log(i)
+    //     },i*1000)
+    // }
+    
+var obj = {
+    a: 1,
+    b: 2,
+    c: 3
+}
+//重复的obj赋值-重复引用对象本身
+obj.a = 2;
+obj.b = 3;
+obj.c = 4;
+//简单的快捷方式-只引用一次对象本身
+with(obj){
+    a = 2;
+    b = 3;
+    c = 4;
+}
+
+function foo(obj){
+    with(obj){
+        a = 2
+    }
+}
+
+var obj1 = {
+    a: 3
+}
+
+var obj2 = {
+    b: 3
+}
+
+foo(obj1)
+console.log(obj1.a) //2
+//console.log(a) // ReferenceError: a is not defined
+
+foo(obj2)
+console.log(obj2.a) //undefined
+console.log(a) //2
+
+</script>
+</html>
